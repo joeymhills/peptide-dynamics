@@ -40,12 +40,37 @@ document.addEventListener('touchmove', function(evt) {
 //animates "Services" when it comes into view
 inView(document.getElementById("services"), () => {
   animate(
-    ".box",
-    { y: [400, 0] },
-    {
+    ".box",{
+      y: [400, 0] }, {
       delay: stagger(0.1),
       duration: 0.8,
       easing: [.22, .03, .26, 1]
     }
   )
 })
+/*
+animate(
+  ".hero-img",{
+  x: [400, 0] },{
+  opacity: 1,
+  duration: 0.8,
+  easing: [.22, .03, .26, 1]
+  }
+)
+*/
+inView(".slide-right", () => {
+  animate(
+    ".slide-right",
+    { opacity: 1, transform: "none" },
+    { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
+  );
+});
+
+
+inView(".slide-left", () => {
+  animate(
+    ".slide-left",
+    { opacity: 1, transform: "none" },
+    { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
+  );
+});

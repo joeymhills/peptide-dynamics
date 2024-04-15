@@ -2581,3 +2581,30 @@ table td {
     position: relative;
   }
 }
+
+/* Joeys CSS animations*/
+
+.slide-right{
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+
+.slide-left{
+  transform: translateY(300px);
+  opacity: 0;
+}
+
+.fade-in-object {
+  opacity: 0; /* Initially hide the object */
+  animation: fadeInAnimation 1s ease-in forwards; /* Animation properties */
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0; /* Start from fully transparent */
+  }
+  to {
+    opacity: 1; /* End with fully opaque */
+  }
+}
