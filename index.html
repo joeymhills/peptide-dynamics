@@ -19,15 +19,12 @@
       <div class="nav-toggle"></div>
       <ul class="inline">
         <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="pricing.html">About</a></li>
+        <li><a href="about.html">Our Team</a></li>
       </ul>
-      <!--
       <ul class="inline right">
-        <li><a href="login.html">Log In</a></li>
-        <li><a href="signup.html" class="button button-secondary button-m full-width-tablet" role="button">Sign Up</a></li>
+        <li><a href="#" class="button button-primary button-l full-width-tablet" role="button">Contact Us</a></li>
       </ul>
-      -->
     </nav>
   </header>
 
@@ -44,7 +41,7 @@
             </div>
           </div>
           <div class="col-one-half middle">
-            <img class="rounded" src="media/content/peptide.png" srcset="media/content/peptide.png 1x, media/content/peptide.png 2x" alt="proteins">
+            <img id="box" class="padding" src="media/content/peptide.png" srcset="media/content/peptide.png 1x, media/content/peptide.png 2x" alt="proteins">
           </div>
         </div>
       </div>
@@ -52,7 +49,7 @@
         <div class="row margin-bottom max-width-l">
           <div class="col-one-half middle">
             <h3>Molecular Dynamics Simulation</h3>
-            <p class="paragraph">Everything is neatly organized in Sass and has been heavily focused on performances.</p>
+            <p class="paragraph">Write some things about molecular dynamics here. I don't have the required knowlege to do so.</p>
           </div>
           <div class="col-one-half">
             <img class="border" src="media/content/moleculeblue.svg" srcset="media/content/moleculegreen.svg 1x, media/content/moleculeblue.svg 2x" alt="Hero Illustration">
@@ -65,7 +62,7 @@
           </div>
           <div class="col-one-half middle">
             <h3>Protein Structure Modeling</h3>
-            <p class="paragraph">100% of this HTML template, including all modules and components have been designed in Sketch.</p>
+            <p class="paragraph">More things about science and other things I am clueless about will go here.</p>
           </div>
         </div>
       </div>
@@ -73,24 +70,24 @@
   
     <!--Cards Section-->
     <section class="bg-gradient-dark dark padding">
-      <div class="center max-width-l">
+      <div id="services" class="center max-width-l">
         <h2>More Services</h2>
         <p class="paragraph">At vero eos et accusamus et iusto odio dignissimos ducimus.</p>
       </div>
       <div class="row margin-top max-width-l">
-        <div class="col-one-fourth card card-content dark">
+        <div class="col-one-fourth card card-content box dark">
           <h4>Protemoics Services</h4>
           <p class="paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <div class="col-one-fourth card card-content dark">
+        <div class="col-one-fourth card card-content box dark">
           <h4>N-terminal sequencing</h4>
           <p class="paragraph">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur mollit.</p>
         </div>
-        <div class="col-one-fourth card card-content dark">
+        <div class="col-one-fourth card card-content box dark">
           <h4>Lipidomics Service</h4>
           <p class="paragraph">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-        <div class="col-one-fourth card card-content dark">
+        <div class="col-one-fourth card card-content box dark">
           <h4>Protein Sequence Analysis</h4>
           <p class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
         </div>
@@ -149,12 +146,16 @@
           <p class="paragraph">Enter your details below.</p>
           <form>
             <div class="form-group">
+              <label for="password">Name:</label>
+              <input id="password" type="password" name="login-password">
+            </div>
+            <div class="form-group">
               <label for="email">Email:</label>
               <input id="email" type="email" name="email">
             </div>
             <div class="form-group">
-              <label for="password">Password:</label>
-              <input id="password" type="password" name="login-password">
+              <label for="email">Message:</label>
+                <textarea id="email" type="email" name="email"></textarea>
             </div>
             <a href="#" class="button button-primary full-width" role="button">Submit</a>
           </form>
@@ -165,7 +166,6 @@
       </div>
     </section>
 
-  <script src="js/main.js"></script>
     <!--Timeline section
     <section class="padding">
       <div class="max-width-l">
@@ -289,6 +289,6 @@
     <p class="copyright"><span>Website by</span><a >JMH Web Design</a><span> - © 2024, all rights reserved.</span></p>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="dist/bundle.js"></script>
 </body>
 </html>
