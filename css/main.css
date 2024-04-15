@@ -2599,6 +2599,9 @@ table td {
   opacity: 0; /* Initially hide the object */
   animation: fadeInAnimation 1s ease-in forwards; /* Animation properties */
 }
+.stagger {
+  transform: translateY(400px);
+}
 
 @keyframes fadeInAnimation {
   from {

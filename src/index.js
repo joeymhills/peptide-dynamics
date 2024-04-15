@@ -38,39 +38,25 @@ document.addEventListener('touchmove', function(evt) {
   evt.preventDefault();
 });
 //animates "Services" when it comes into view
+//TODO: Fix this with the css to make the boxes start at y+400
 inView(document.getElementById("services"), () => {
   animate(
-    ".box",{
-      y: [400, 0] }, {
-      delay: stagger(0.1),
-      duration: 0.8,
-      easing: [.22, .03, .26, 1]
-    }
-  )
-})
-/*
-animate(
-  ".hero-img",{
-  x: [400, 0] },{
-  opacity: 1,
-  duration: 0.8,
-  easing: [.22, .03, .26, 1]
-  }
-)
-*/
-inView(".slide-right", () => {
+    ".stagger",
+    { transform: "none"},
+    { delay: stagger(0.1), duration: 0.8, easing: [.22, .03, .26, 1] })},
+    { amount: .6});
+
+inView(document.getElementById("slide-right"), () => {
   animate(
     ".slide-right",
     { opacity: 1, transform: "none" },
-    { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
-  );
-});
+    { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] })},
+    { amount: .5});
 
 
 inView(".slide-left", () => {
   animate(
     ".slide-left",
     { opacity: 1, transform: "none" },
-    { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
-  );
-});
+    { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] })},
+    { amount: 0});
