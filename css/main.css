@@ -2603,6 +2603,14 @@ table td {
   transform: translateY(400px);
 }
 
+.twitter-icon {
+  width: 30px; /* Adjust the width and height as needed */
+  height: 30px;
+  display: inline-block;
+  background-image: url('https://raw.githubusercontent.com/joeymhills/peptide-dynamics/main/images/twitter-logo.png'); /* Replace 'twitter-logo.png' with the path to your Twitter logo image */
+  background-size: cover;
+}
+
 @keyframes fadeInAnimation {
   from {
     opacity: 0; /* Start from fully transparent */
