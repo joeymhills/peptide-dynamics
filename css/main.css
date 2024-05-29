@@ -2604,10 +2604,10 @@ table td {
 }
 
 .linkedin-icon {
-  width: 30px; /* Adjust the width and height as needed */
-  height: 30px;
+  width: 15px; /* Adjust the width and height as needed */
+  height: 15px;
   display: inline-block;
-  background-image: url('https://github.com/joeymhills/peptide-dynamics/tree/main/media/content/linkedin-logo.png'); /* Replace 'twitter-logo.png' with the path to your Twitter logo image */
+  background-image: url('https://github.com/joeymhills/peptide-dynamics/blob/main/media/content/linkedin-logo.png'); /* Replace 'twitter-logo.png' with the path to your Twitter logo image */
   background-size: cover;
 }
 
