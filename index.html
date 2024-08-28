@@ -15,7 +15,7 @@
 
   <header class="header-main dark">
     <nav>
-      <a href="index.html" class="logo" rel="home"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><path d="M7.335 1.023l2.462.434a1 1 0 0 1 .811 1.159L8.004 17.388a2 2 0 0 1-2.317 1.622l-3.94-.694a1 1 0 0 1-.81-1.159L3.28 3.862a3.5 3.5 0 0 1 4.054-2.839zm7.039 3.272l7.878 1.39a1 1 0 0 1 .812 1.158l-1.997 11.325a5.5 5.5 0 0 1-6.372 4.461l-4.431-.78a1 1 0 0 1-.812-1.16l2.605-14.771a2 2 0 0 1 2.317-1.623z" fill="currentColor"/></svg><span>Peptide Dynamics</span></a>
+      <a href="index.html" class="logo" rel="home"><img src="media/favicon-white.png"><span>Peptide Dynamics</span></a>
       <div class="nav-toggle"></div>
       <ul class="inline">
         <li><a href="index.html" class="active">Home</a></li>
@@ -143,26 +143,23 @@
     <section class="row middle bg-dark dark">
       <div class="middle padding">
         <div class="max-width-s">
-          <h2 class="center">Contact Us</h2>
+          <h2 class="center">Contact us</h2>
           <p class="paragraph">Enter your details below.</p>
-          <form>
+          <form id="contact-form">
             <div class="form-group">
-              <label for="password">Name:</label>
-              <input id="password" type="password" name="login-password">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
               <label for="email">Email:</label>
-              <input id="email" type="email" name="email">
+              <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-              <label for="email">Message:</label>
-                <textarea id="email" type="email" name="email"></textarea>
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
             </div>
-            <a href="#" class="button button-primary full-width" role="button">Submit</a>
+            <button href="#" type="submit" class="button button-primary full-width" role="button">Submit</button>
           </form>
-        </div>
-        <div class="center max-width-s space-top">
-          <span class="muted">Don't have an account? </span><a href="signup.html">Sign Up</a>
         </div>
       </div>
     </section>
@@ -283,5 +280,31 @@
   </footer>
 
   <script src="dist/bundle.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+  
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Send email using smtp.js
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "PeptideDynamicsInquiry@gmail.com",    // Replace with your Gmail address
+        Password: "PeptideDynamics67",     // Replace with your Gmail password or app password
+        To: "joeymhills@gmail.com",         // Replace with the recipient's email address
+        From: "PeptideDynamicsInquiry@gmail.com",
+        Subject: `New Contact Form Submission from ${name}`,
+        Body: `Name: ${name}<br>Email: ${email}<br>Message: ${message}`
+      }).then(
+        message => alert("Mail sent successfully!")
+      ).catch(
+        error => alert("Failed to send mail: " + error)
+      );
+      });
+  </script>
 </body>
 </html>
